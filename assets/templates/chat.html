@@ -1,0 +1,21 @@
+<div class="panel panel-default" style="margin: 60px 0;">
+  <div class="panel-body">
+    <div class="chat" ng-repeat="chat in chatList | orderBy:'-id':false">
+      <p class="user">{{chat.user}}</p>
+      <p class="message">{{chat.message}}</p>
+    </div>
+  </div>
+</div>
+<div class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="row" style="margin-top: 7px;">
+    <div class="col-xs-12 col-md-3">
+      <input type="text" ng-model="user.user" class="form-control" placeholder="Usuario">
+    </div>
+    <div class="col-xs-12 col-md-8">
+      <input type="text" ng-model="user.message" class="form-control" placeholder="Mensaje">
+    </div>
+    <div class="col-xs-12 col-md-1">
+      <button class="btn btn-primary btn-block" ng-click="sendMsg(user)">Enviar</button>
+    </div>
+  </div>
+</div>
